@@ -1,0 +1,135 @@
+img {
+    
+    position: absolute;
+    TOP:21px;
+    LEFT:46px;
+    
+}
+
+
+
+.text_un {
+    color:red; 
+    display: inline-block;
+    float: left;
+    font-size:23px;
+}
+
+.text_gineering {
+    float: left;
+    display: inline-block;
+    font-size:23px;
+    color:black;
+    
+}
+
+.rowtop {
+    height:90px;
+}
+
+.up{
+    height:25%;
+}
+.down{
+    height:75%;
+}
+.textup{
+    border-bottom:1px solid black;
+    height:50%;
+}
+
+.textdown{
+    height:50%;
+}
+
+.tagline {
+    position: absolute;
+    top: 49px;
+    left:145px;
+    font-size:11px;
+    color:#747474; 
+}
+
+.two {
+    position: absolute ;
+    top: 60px;
+    left:170px;
+    font-size:10px;
+    color:#747474;  
+}
+
+.dash {
+    background-color: white;
+    border: white;
+    color: #f04c4e  ;
+    height:30px;
+    width:110px;
+    text-align: middle;
+    display: inline-block;
+    font-size: 14px; 
+    cursor: pointer;
+    float: right; 
+}   
+
+
+.logout { 
+    background-color: white;
+    border-color: #f04c4e   ;
+    color: #f04c4e;
+    text-align: middle    ;   
+    display: inline-block;
+    font-size: 14px; 
+    cursor: pointer;
+    height:30px;
+    width:100px;
+    float: right;  
+}
+
+.login {
+    background-color: white;
+    border-color: #f04c4e;
+    color: #f04c4e;
+    height:30px;
+    width:110px;
+    text-align: middle;
+    display: inline-block;
+    font-size: 14px; 
+    cursor: pointer;
+    float: right; 
+}   
+
+.new { 
+    background-color: #f04c4e;
+    border-color: #f04c4e   ;
+    color: white;
+    text-align: middle    ;   
+    display: inline-block;
+    font-size: 15px; 
+    cursor: pointer;
+    height:30px;
+    width:100px;
+    float: right;  
+}
+
+.status {
+    width:100%;
+    height:128px;
+    border:none;
+    border-radius: none;
+    resize: none;
+}
+
+.submit {
+    margin-right:10px;   
+    background-color: #f04c4e;
+    border-color: #f04c4e;
+    color: white;
+    text-align: right    ;   
+    float: right;
+    font-size: 16px; 
+    cursor: pointer;
+    height:33px;
+    width:85px;
+    padding-right:15px;
+}
+   

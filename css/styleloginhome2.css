@@ -1,0 +1,47 @@
+.text_un {
+    color:red;
+    margin: 0;
+    display: inline-block;
+    float: left;
+    padding:0;
+}
+
+.text_gineering {
+    color:#8a8a8a;
+    
+}
+
+.tagline {
+    position: absolute;
+    top: 60px;
+    right: 1035px; 
+}
+
+.two {
+    position: relative;
+    left:30px;   
+}
+
+.login {
+    background-color: white;
+    border-color: #f04c4e;
+    color: #f04c4e  ;
+    height:33px;
+    width:94px;
+    text-align: middle;
+    display: inline-block;
+    font-size: 16px; 
+    cursor: pointer; 
+}   
+
+.new { 
+    background-color: #f04c4e;
+    border-color: #f04c4e;
+    color: white;
+    text-align: left    ;   
+    display: inline-block;
+    font-size: 16px; 
+    cursor: pointer;
+    height:33px;
+    width:94px;  
+}   
