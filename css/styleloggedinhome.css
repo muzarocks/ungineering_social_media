@@ -19,13 +19,13 @@
 
 
 .tag {
-    width: 10%;
+    width: 9.25%;
     height: 85%;
     
 }
 
 .col1 {
-    width: 10%;
+    width: 9.5%;
     height: 100%;
     
 }
@@ -62,16 +62,17 @@
 
 
 .r1 {
+    padding-top: 6px;
     background-color: #F4F4F4;
-    height:78px;
+    height:88px;
 }
 
 .r2 {
     background-color: #F4F4F4;
-    height:140px;
+    height:120px;
 }
 .r3 {
-    height:50px;
+    height:80px;
 }
 
 .t1,.t3 {

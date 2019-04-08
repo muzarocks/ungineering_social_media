@@ -10,7 +10,7 @@
         
             <div class="col col1">
       
-                <img src="img/ungineering_logo.svg" alt="ungineering_logo"  width="130" height="70" align="right"/>
+                <img src="img/ungineering_logo.svg" alt="ungineering_logo"  width="125" height="65" align="right"/>
  
             </div>
             
@@ -34,7 +34,20 @@
             <div class="col col2">
                 <div class="row row1"></div>
                 <div class="row row2">
+                    <?php
+                        $flag2=1;
+                        if($flag2==0)
+                        {
+                    ?>
+                        <button class="login">login</button>
+                    <?php
+                        }
+                        else {
+                    ?>
                             <button class="dash">My Dashboard</button>
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
 
@@ -43,21 +56,37 @@
                 <div class="row row1"></div>
             
                 <div class="row row2">
-                    
+                    <?php
+                        $flag2=1;
+                        if($flag2==1)
+                        {
+                    ?>
                         <div class="col b">
-                            <button class="logout">Log Out</button>
+                            <button class="logout">Logout</button>
                         </div>
+                    <?php
+                        }
+                        else {
+                    ?>
+                        <div class="col b">
+                            <button class="new">New User</button>
+                        </div>
+                    <?php
+                        }
+                    ?>
                     
+
                 </div>
             </div>
 
         </div>
         
-        
+<?php
+    $flag=1;
+    if($flag==1)
+    {
+?>  
         <div class="upper">        
-        
-        
-        
             <div class="row r1">
                 <div class="col t1">
                 </div>
@@ -68,8 +97,7 @@
                 </div>
                 <div class="col t3">
                 </div>   
-            </div>
-            
+            </div>    
             <div class="row r2">
                  <div class="col s1">
                  </div>
@@ -84,8 +112,7 @@
                  </div>
                 <div class="col s3">
                 </div>  
-            </div>
-            
+            </div>        
             <div class="row r3">
                 <div class="col submits">
                 </div>
@@ -94,17 +121,12 @@
                 </div>
                 <div class="col submits">
                 </div> 
-          
-          
-    
-        
-        </div>
-        
-        </div>
-                
+            </div>      
+        </div>          
+<?php
+    }
+?>              
         <div class="lower">
-        
-        
             <div class="row stat">
                 <div class="col x1">
                 </div>
@@ -124,86 +146,7 @@
             </div>
             
             
-            <div class="row stat">
-                <div class="col x1">
-                </div>
-            
-                <div class="col x2">
-                    <div class="box">
-                        <b>Name</b>
-                        <p class="par">
-                        my name is julia montigue. I used to Home Misnister of this country.Because of some traitors i had to sacrifice my life.my name is julia montigue. I used to Home Misnister of this country.Because of some traitors i had to sacrifice my life.<br/>
-                        <p class="time">Time:11.40Hrs IST |20 APR</p>
-                      </p>
-                    </div>  
-                </div>
-            
-                <div class="col x3">
-                </div>          
-            </div>
-            
-            
-            <div class="row stat">
-                <div class="col x1">
-                </div>
-            
-                <div class="col x2">
-                    <div class="box">
-                        <b>Name</b>
-                        <p class="par">
-                        my name is julia montigue. I used to Home Misnister of this country.Because of some traitors i had to sacrifice my life.my name is julia montigue. I used to Home Misnister of this country.Because of some traitors i had to sacrifice my life.<br/>
-                        <p class="time">Time:11.40Hrs IST |20 APR</p>
-                      </p>
-                    </div>  
-                </div>
-            
-                <div class="col x3">
-                </div>          
-            </div>
-            
-            
-            
-            <div class="row stat">
-                <div class="col x1">
-                </div>
-            
-                <div class="col x2">
-                    <div class="box">
-                        <b>Name</b>
-                        <p class="par">
-                        my name is julia montigue. I used to Home Misnister of this country.Because of some traitors i had to sacrifice my life.my name is julia montigue. I used to Home Misnister of this country.Because of some traitors i had to sacrifice my life.<br/>
-                        <p class="time">Time:11.40Hrs IST |20 APR</p>
-                      </p>
-                    </div>  
-                </div>
-            
-                <div class="col x3">
-                </div>          
-            </div>
-            
-            
-            
-            
-            <div class="row stat">
-                <div class="col x1">
-                </div>
-            
-                <div class="col x2">
-                    <div class="box">
-                        <b>Name</b>
-                        <p class="par">
-                        my name is julia montigue. I used to Home Misnister of this country.Because of some traitors i had to sacrifice my life.my name is julia montigue. I used to Home Misnister of this country.Because of some traitors i had to sacrifice my life.<br/>
-                        <p class="time">Time:11.40Hrs IST |20 APR</p>
-                      </p>
-                    </div>  
-                </div>
-            
-                <div class="col x3">
-                </div>
-                
-                          
-            </div>
-        </div>  
-            
-                  
+         
+        </div>
     </body>
+</html>
