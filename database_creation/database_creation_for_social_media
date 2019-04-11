@@ -16,9 +16,8 @@ CREATE TABLE users(
 
 CREATE TABLE posts(
     id int(200) NOT NULL AUTO_INCREMENT,
-    post  VARCHAR(255),
-    date_created DATE NOT NULL,
-    time_created TIME NOT NULL,
+    post  VARCHAR(255) not null,
+    date_and_time DATETIME NOT NULL,
     user_id int,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)

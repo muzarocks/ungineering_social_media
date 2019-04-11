@@ -10,12 +10,17 @@
     }
     
     $status = $_POST['status'];
-    $date=date("Y/m/d");
-    $time=date("h:m");
-    $sql = "insert into posts(post, date_created, time_created)values('$status','$date','$time')";
+    if (empty($status)) {
+        die('Enter some data first');
+    }
+    $datetime=date("d-m-y h:i:s ");
+    
+    $sql = "insert into posts(post, date_and_time,user_id)values('$status','$datetime',1)";
     if(!mysqli_query($conn,$sql)){
         die("Error :".$sql."<br>".mysqli_error($conn));
     }
     echo "Status Update Sucessful";
+    $last_id = $conn->insert_id;
+    echo "$last_id";
     mysql_close($conn);
 ?>

@@ -85,7 +85,7 @@
     $flag=1;
     if($flag==1)
     {
-?>  
+?>    
         <div class="upper">        
             <div class="row r1">
                 <div class="col t1">
@@ -125,28 +125,90 @@
         </div>          
 <?php
     }
-?>              
-        <div class="lower">
+?>   
+<?php
+    $hostname = "localhost";
+    $username = "root";
+    $db_password = "ralphubuntu";
+    $database = "social_media";
+
+    $conn = mysqli_connect($hostname, $username, $db_password, $database);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $sql = 'SELECT * FROM posts where user_id="1" ';
+
+    $result = mysqli_query($conn, $sql);
+    if (!$result) {
+        die("Error: " . $sql . "<br>" . mysqli_error($conn));
+    }
+    
+    $no_of_rows=mysqli_num_rows ( $result );
+
+    for ($i=0; $i <$no_of_rows ; $i++) { 
+
+        $sql_owner='SELECT * FROM users where id="1"';
+        $result2 = mysqli_query($conn, $sql_owner);
+        if (!$result2) {
+            die("Error: " . $sql_owner . "<br>" . mysqli_error($conn));
+        }
+        while ($row2=mysqli_fetch_array($result2)) {
+            $user_name=$row2['name'];
+        }
+        
+        while ($row=mysqli_fetch_array($result)) {
+            $user_post=$row['post'] ;
+            $time=$row['date_and_time'];
+            ?>
+            <div class="lower">
             <div class="row stat">
                 <div class="col x1">
                 </div>
             
                 <div class="col x2">
                     <div class="box stats">
-                        <b>Name</b>
+                        <b><?php
+                                echo $user_name;
+                            ?></b>
                         <p class="par">
-                        my name is julia montigue. I used to Home Misnister of this country.Because of some traitors i had to sacrifice my life.my                  name is julia montigue. I used to Home Misnister of this country.Because of some traitors i had to sacrifice my life.<br/>
-                        <p class="time">Time:11.40Hrs IST |20 APR</p>
+                            <?php
+                                echo $user_post;
+                            ?>
+                        <br/>
+                        <p class="time">
+                           <h5> <?php
+                                echo $time;
+                            ?></h5>
+                        </p>
                       </p>
                     </div>  
                 </div>
             
                 <div class="col x3">
                 </div>          
-            </div>
-            
-            
-         
+            </div> 
         </div>
+        <?php
+        }
+
+        $sql_owner='SELECT * FROM users where id="1"';
+
+        $result2 = mysqli_query($conn, $sql_owner);
+        if (!$result2) {
+            die("Error: " . $sql_owner . "<br>" . mysqli_error($conn));
+        }
+        while ($row2=mysqli_fetch_array($result2)) {
+            $user_name=$row2['name'];
+        }
+    }
+
+    mysqli_close($conn);
+?>           
+        
     </body>
 </html>
+
+
+
+
