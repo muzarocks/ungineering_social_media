@@ -116,11 +116,15 @@ form > div{
 }
 
 input{
-    width:345px;
-    height:32px;
+    /*width:345px;*/
+    height:35px;
     padding:2px 7px;
     border:0px;
     border-radius:3px;
+}
+
+.col4{
+    width:74%;
 }
 
 .submit > .col4{
@@ -133,13 +137,20 @@ input{
     font-size: 16px;
 }
 .outer > .col4 > a{
-    padding-left:76px;
+    /*padding-left:76px;*/
 }
 
 .outer > .col3{
     height:5%;
 }
 
+input,.outer > .col4{
+    width:395px;
+}
+
+.outer > .col4{
+    text-align: center;
+}
     
 
     

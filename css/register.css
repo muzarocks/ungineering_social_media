@@ -79,7 +79,7 @@ span{
     padding-left:87px;
 }
 
-.div5 > a, .right > div > div >a{
+.div5 > a, .outer a{
     color:#D03D2F;
     font-family: "open sans",sans-serif;
     font-size:18px;
@@ -115,9 +115,13 @@ form > div{
     font-family: sans-serif;
 }
 
+.col4{
+    width:74%;
+}
+
 input{
-    width:345px;
-    height:32px;
+    /*width:345px;*/
+    height:35px;
     padding:2px 7px;
     border:0px;
     border-radius:3px;
@@ -133,12 +137,22 @@ input{
     font-weight: bold;
 }
 .outer > .col4 > a{
-    padding-left:76px;
+    /*padding-left:76px;*/
 }
 
 .outer > .col3{
     height:5%;
 }
+
+input,.outer > .col4{
+    width:395px;
+}
+
+.outer > .col4{
+    text-align: center;
+}
+    
+
 
     
 
