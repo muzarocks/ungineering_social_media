@@ -160,6 +160,9 @@
 .time {
     color:#545151;
     font-size: 15px;
+    margin: none;
+    position: absolute;
+    bottom: 0px;
 }
 
 

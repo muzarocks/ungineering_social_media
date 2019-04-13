@@ -3,6 +3,8 @@
     <head>
         <link rel="stylesheet" href="css/styleloggedinhome.css"/>
         <link rel="stylesheet" href="css/styleloggedinhome2.css"/>
+
+        <title>HomePage</title>
     <head>
     
     <body>
@@ -13,6 +15,18 @@
                 <img src="img/ungineering_logo.svg" alt="ungineering_logo"  width="125" height="65" align="right"/>
  
             </div>
+
+            <?php
+                session_start();
+                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                    $flag=1;
+                    $userid_loggedin=$_SESSION['id'];
+                    $user_loggedin=$_SESSION['name'];
+                    
+                }
+                else
+                    $flag=0;
+            ?>
             
             <div class="col tag">
                <div class="row up"></div>
@@ -35,11 +49,10 @@
                 <div class="row row1"></div>
                 <div class="row row2">
                     <?php
-                        $flag2=1;
-                        if($flag2==0)
+                        if($flag==0)
                         {
                     ?>
-                        <button class="login">login</button>
+                        <button class="login"><a href="login.php">Login</a></button>
                     <?php
                         }
                         else {
@@ -57,19 +70,18 @@
             
                 <div class="row row2">
                     <?php
-                        $flag2=1;
-                        if($flag2==1)
+                        if($flag==1)
                         {
                     ?>
                         <div class="col b">
-                            <button class="logout">Logout</button>
+                            <button class="logout"><a href="logout.php">Logout</a></button>
                         </div>
                     <?php
                         }
                         else {
                     ?>
                         <div class="col b">
-                            <button class="new">New User</button>
+                            <button class="new"><a href="register.php">New User</a></button>
                         </div>
                     <?php
                         }
@@ -106,6 +118,7 @@
                         <div class="status_update">
                             <form method ="post" action = "status_update.php">
                             <textarea class="status" name="status"></textarea>
+                            <input type="hidden" name="userid" value=<?php echo $userid_loggedin; ?>>
                             <input type= "submit" name = "submit" value = "submit"/>    
                         </div>
                     </div>  
@@ -137,7 +150,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = 'SELECT * FROM posts where user_id="1" ';
+    $sql = 'SELECT * FROM posts where user_id="1" ORDER BY id desc ';
 
     $result = mysqli_query($conn, $sql);
     if (!$result) {
@@ -177,11 +190,10 @@
                             ?>
                         <br/>
                         <p class="time">
-                           <h5> <?php
+                           <h5>Time: <?php
                                 echo $time;
                             ?></h5>
                         </p>
-                      </p>
                     </div>  
                 </div>
             
@@ -204,8 +216,7 @@
     }
 
     mysqli_close($conn);
-?>           
-        
+?>         
     </body>
 </html>
 

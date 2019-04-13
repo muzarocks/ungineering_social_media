@@ -1,7 +1,13 @@
+<?php
+    session_start();
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+           header("Location: homepageloggedin.php");
+    }
+?>
 <html>
     <head>
-        <title>Registration page</title> 
-        <link rel="stylesheet" href="/social_media/css/register.css">
+        <title>Login page</title> 
+        <link rel="stylesheet" href="/social_media/css/login.css">
     </head>
     <body>
         <div class="left">
@@ -18,44 +24,36 @@
                 </div>
             </div>
             <div class="div4">
-                <label>New User</label><br>
-                <label>Create</label><br>
-                <label>Account</label>
+                <label>Existing User</label><br>
+                <label>Log-in</label>
             </div>
             <div class="div5">
-                <a href="login.php">Existing User Log-in</a>
+                <a href="register.php">New User Create Account</a>
             </div>  
         </div>
         <div class="right">
-            <div class="create-ac">
-                <p>Create Account</p>
+            <div class="login">
+                <p>Log-in</p>
             </div>
-            <form action="register_submit.php" method="POST">
-                <div class="name">
-                    <div class="col3"><label for="name">Name</label></div>
-                    <div class="col4"><input type="text" name="name" required id="name"></div>
-                </div>
+            <form action="login_submit.php" method="POST">
                 <div class="email">
                     <div class="col3"><label for="email">Email</label></div>
                     <div class="col4"><input type="text" name="email" required id="email"></div>
                 </div>
                 <div class="password">
-                    <div class="col3"><label for="password1">Password</label></div>
-                    <div class="col4"><input type="password" name="password" required id="password1"></div>
-                </div>
-                <div class="password">
-                    <div class="col3"><label for="password2">Password</label></div>
-                    <div class="col4"><input type="password" name="password" required id="password2"></div>
+                    <div class="col3"><label for="password">Password</label></div>
+                    <div class="col4"><input type="password" name="password" required id="password"></div>
                 </div>
                 <div class="submit">
                    <div class="col3"><label></label></div>
-                    <div class="col4"><input type="submit" name="submit" value="Create Account"></div>
+                    <div class="col4"><input type="submit" name="submit" value="Log-in"></div>
                 </div>
+                
             </form>
             <div class="outer">
                 <div class="col3"></div>
                 <div class="col4">
-                    <a href="login.php">Existing User Log-in</a>
+                    <a href="register.html">New User Create Account</a>
                 </div>
             </div>
         </div>

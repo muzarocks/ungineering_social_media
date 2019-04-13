@@ -1,9 +1,10 @@
+
 <?php
     session_start();
     
     $hostname = "127.0.0.1";
     $username = "root";
-    $db_password = "muza123";
+    $db_password = "ralphubuntu";
     $db_name = "social_media";
     
     $conn = mysqli_connect($hostname, $username, $db_password, $db_name);
@@ -24,9 +25,11 @@
             echo "login failed";
     }
     while ($row=mysqli_fetch_array($result)) {
+        session_start();
+        $_SESSION['loggedin']=true;    
         $_SESSION['id'] = $row['id'];
         $_SESSION['name'] = $row['name'];
-        header('Location: homepageloggedin.html');
+        header('Location: homepageloggedin.php');
         exit;
     }
     mysqli_close($conn);

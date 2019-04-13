@@ -2,7 +2,7 @@
     session_start();
     $hostname = "127.0.0.1";
     $username = "root";
-    $db_password = "muza123";
+    $db_password = "ralphubuntu";
     $db_name = "social_media";
     
     $conn = mysqli_connect($hostname, $username, $db_password, $db_name);
@@ -19,7 +19,7 @@
         die("Error : ".$sql."<br>".mysqli_error($conn));
     }
     echo "Registration Successful";
-    header('Location: login.html');
+    header('Location: login.php');
     exit;
     mysqli_close($conn);
 ?> 

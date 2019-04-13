@@ -9,7 +9,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = 'SELECT * FROM posts where user_id="1" ';
+    $sql = 'SELECT * FROM posts where user_id="1" order by id desc';
 
     $result = mysqli_query($conn, $sql);
     if (!$result) {

@@ -122,6 +122,7 @@ img {
     border:none;
     border-radius: none;
     resize: none;
+    outline: none;
 }
 
 .submit {
