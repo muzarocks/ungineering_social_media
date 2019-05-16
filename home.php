@@ -21,7 +21,7 @@
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                     $flag=1;
                     $userid_loggedin=$_SESSION['id'];
-                    echo $userid_loggedin;
+                    //echo $userid_loggedin;
                     $user_loggedin=$_SESSION['name'];
                     
                 }

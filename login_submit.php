@@ -29,7 +29,7 @@
         $_SESSION['loggedin']=true;    
         $_SESSION['id'] = $row['id'];
         $_SESSION['name'] = $row['name'];
-        header('Location: homepageloggedin.php');
+        header('Location: home.php');
         exit;
     }
     mysqli_close($conn);

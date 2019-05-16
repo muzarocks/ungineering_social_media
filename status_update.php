@@ -27,6 +27,6 @@
         die("Error :".$sql."<br>".mysqli_error($conn));
     }
     echo "Status Update Sucessful";
-    header('Location: homepageloggedin.php');
+    header('Location: home.php');
     mysql_close($conn);
 ?>
