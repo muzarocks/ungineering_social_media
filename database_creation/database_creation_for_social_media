@@ -23,3 +23,4 @@ CREATE TABLE posts(
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
+alter table posts modify date_and_time varchar(255);

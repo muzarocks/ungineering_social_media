@@ -75,14 +75,15 @@
                         {
                     ?>
                         <div class="col b">
-                            <button class="logout"><a href="logout.php">Logout</a></button>
+                            <a href="logout.php"><button class="logout">Logout</button></a>
                         </div>
                     <?php
                         }
                         else {
                     ?>
                         <div class="col b">
-                            <button class="new"><a href="register.php">New User</a></button>
+                            <a href="register.php"><button class="new">New User</button></a>
+
                         </div>
                     <?php
                         }
@@ -196,7 +197,11 @@
                         <br/>
                         <p class="time">
                            <h5>Time: <?php
+                                //$date = date("d", $time);
+                                //$date=date("d-m-y h:i A");
+                                //echo date("d-m-y h:i A");
                                 echo $time;
+                                //echo date("d M Y h:i A");
                             ?></h5>
                         </p>
                     </div>  

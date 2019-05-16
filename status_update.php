@@ -18,7 +18,7 @@
     if (empty($status)) {
         die('Enter some data first');
     }
-    $datetime=date("d-m-y h:i:s ");
+    $datetime=date('d M Y h:i A');
     
     
     
